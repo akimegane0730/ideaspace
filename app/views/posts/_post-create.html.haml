@@ -17,3 +17,5 @@
       .post-new-info-opponent
         %h2 対戦相手
         = f.collection_select :opponent_id, Opponent.all, :id, :name, {prompt: "---"}
+      .post-new-info-btn
+        = f.submit "投稿する", class:"post-new-info-btn"

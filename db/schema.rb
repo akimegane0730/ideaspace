@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 2020_02_22_112014) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.text "content", null: false
-    t.integer "place_id"
+    t.integer "place_id", null: false
     t.integer "player_id"
-    t.integer "opponent_id"
+    t.integer "opponent_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
