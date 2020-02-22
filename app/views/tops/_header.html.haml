@@ -1,11 +1,18 @@
 .header
   .header-title 
     = link_to "De活", root_path
-  #ul.header-list
-    %li= link_to "選手一覧", "#"
-    %li= link_to "今日のポジ要素", "#"
-    %li= link_to "アイウエオ", "#"
-    %li= link_to "ログイン", "#", class:"login-btn"
+  - if user_signed_in?
+    #ul.header-list
+      %li= link_to "選手一覧", "#"
+      %li= link_to "今日のポジ要素", "#"
+      %li= link_to "アイウエオ", "#"
+      %li= link_to "ログアウト", destroy_user_session_path, method: :delete 
+  - else
+    #ul.header-list
+      %li= link_to "選手一覧", "#"
+      %li= link_to "今日のポジ要素", "#"
+      %li= link_to "アイウエオ", "#"
+      %li= link_to "ログイン", new_user_session_path
   %i#show.fa.fa-bars
   #menu
     %i#hide.fa.fa-times
