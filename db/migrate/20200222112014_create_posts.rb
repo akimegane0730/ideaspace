@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.references  :user, null:false
       t.text        :content, null:false
       t.integer     :place_id
+      t.integer     :player_id
       t.timestamps
     end
   end
