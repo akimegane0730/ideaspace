@@ -42,6 +42,8 @@ Things you may want to cover:
 |------|----|-------|
 |content|text|null:false|
 |user_id|reference|null:false|
+|place_id|integer|null:false|
+|player_id|integer|null:false|
 
 ### Association
 - has_many :images
