@@ -1,0 +1,24 @@
+.top
+  .top-index
+  - @posts.each do |post|
+    = link_to "#" do
+      .top-box
+        .top-box-day
+          = post.created_at
+        .top-box-image
+          No image
+        .top-box-info
+          .top-box-info-content
+            = post.content
+          .top-box-info-player
+            今日のMVP
+            = post.player.name
+          .top-box-info-detail
+            .top-box-info-detail-place
+              = post.place.name
+            .top-box-info-detail-opponent
+              VS
+              = post.opponent.name
+          .top-box-info-user
+            = link_to "#" do
+              = post.user.name
