@@ -5,12 +5,22 @@
   background: #33CCFF;
   box-shadow: 5px 5px #75A9FF;
 
-  &-title a{
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    font-size: 2.5rem;
-    line-height: 80px;
+  &-left {
+    display: flex;
+    &-title a{
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      font-size: 2.5rem;
+      line-height: 80px;
+    }
+
+    &-question i{
+      line-height: 80px;
+      margin-left: 10px;
+      font-size: 1.5rem;
+      color: black;
+    }
   }
   &-list {
     display: flex;

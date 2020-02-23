@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @post.images.new
   end
 
   def create
@@ -16,6 +17,6 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:content, :place_id, :player_id, :opponent_id).merge(user: current_user)
+      params.require(:post).permit(:content, :place_id, :player_id, :opponent_id, images_attributes: [:image, :_destroy, :id]).merge(user: current_user)
     end
 end
