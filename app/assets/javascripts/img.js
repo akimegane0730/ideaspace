@@ -1,19 +1,20 @@
 $(function(){ 
-  // var camera = document.querySelector('.post-new-image');
+
 
   
 
-  // camera.addEventListener('click', function() {
-  //   var image = document.getElementById('box');
-  //   image.checked = true;
-  // });
+  file_img.onload = function(){
+    const buildFileField = (num)=> {
+      const html = `<label class="post-new-image">
+                    <div class="input-area" id="box">
+                    <input id="img-file" style="display:none;" type="file" name="post[images_attributes][0][image]">
+                    </div>
+                    </label>`
+      return html;
+    }
+    $('.post-new-inage').append(buildFileField)
+  };
 
-
-  $('.post-new-image').on('click', function(){
-    
-    var btn = document.getElementById('img-file');
-    btn.checked = true;
-  });
 });
 
 

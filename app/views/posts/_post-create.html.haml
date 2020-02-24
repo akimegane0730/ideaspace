@@ -1,10 +1,10 @@
 .post
   .post-new
   = form_with model: @post, class:"post-form", url: { action: :create }, local: true do |f|
-    .post-new-image
+    %label.post-new-image
       = f.fields_for :images do |i|
         .input-area#box
-          = i.file_field :image, id: 'img-file'
+          = i.file_field :image, id: 'img-file', style: "display:none;"
       .post-new-image-icon
         =icon('fas', 'camera')
       %h1.post-new-image-text 画像を投稿

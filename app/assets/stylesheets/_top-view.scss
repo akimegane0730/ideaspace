@@ -37,6 +37,8 @@
         border: 2px solid lightgray;
         border-radius: 20px;
         padding: 10px;
+        overflow-y: scroll;
+        word-break: break-all;
       }
 
       &-player {
@@ -61,4 +63,13 @@
   }
 
 
+}
+.next-btn a{
+  display: block;
+  text-align: center;
+  margin: 50px auto;
+  padding: 10px;
+  background: lightgreen;
+  width: 200px;
+  border-radius: 50px;
 }

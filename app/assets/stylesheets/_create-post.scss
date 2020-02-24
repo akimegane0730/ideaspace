@@ -3,11 +3,12 @@
   &-form {
     display: flex;
     width: 80vw;
-    max-width: 80vw;
+    min-width: 960px;
     height: 70vh;
     margin: 0 auto;
     box-shadow: 10px 15px 10px 5px #999999;
     margin-top: 15px;
+    min-height: 520px;
   }
 
   &-new-image {
