@@ -4,9 +4,9 @@
     = link_to "#" do
       .top-box
         .top-box-day
-          = post.created_at
+          = post.created_at.to_s(:datetime_jp)
         .top-box-image
-          No image
+          = image_tag("#{post.images.first.image}", class:'top-box-image')
         .top-box-info
           .top-box-info-content
             = post.content
