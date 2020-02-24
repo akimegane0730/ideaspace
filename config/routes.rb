@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root "tops#index"
 
   resources :posts, only: [:new, :create]
+
+  resources :players, only: [:index]
 end

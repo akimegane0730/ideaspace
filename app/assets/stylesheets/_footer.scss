@@ -6,7 +6,6 @@
 
 
 .footer a{
-  text-decoration: none;
   width: 100%;
   background-color: #33CCFF;
   color: #fff;
@@ -14,6 +13,11 @@
   padding: 30px 0;
   height: 30px;
   position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
-  margin-top: auto;
+  // bottom: 0; /*下に固定*/
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
