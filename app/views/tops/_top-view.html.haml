@@ -20,7 +20,7 @@
               VS
               = post.opponent.name
           .top-box-info-user
-            = link_to "#" do
+            = link_to "#", class:"top-box-info-user" do
               = post.user.name
   .next-btn
-    = link_to "もっと見る", "#", class:"next-btn"
+    = link_to "もっと見る", tops_many_path, class:"next-btn"
