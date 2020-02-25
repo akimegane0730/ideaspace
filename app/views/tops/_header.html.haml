@@ -20,6 +20,6 @@
     %i#hide.fa.fa-times
     %ul
       %li= link_to "投稿する", new_post_path
-      %li= link_to "マイページ", "#"
+      %li= link_to "マイページ", user_path(current_user.id)
       
 

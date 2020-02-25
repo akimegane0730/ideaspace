@@ -1,0 +1,27 @@
+- if @user.player_id.blank?
+  .top-show
+    .top-show-info
+      .top-show-info-name
+        #{current_user.name}さん
+      .top-show-info-edit
+        = link_to "編集する", "#"
+    .top-show-player
+      .top-show-player-text
+        好きな選手
+      .top-show-player-add1
+        = link_to "追加する", "#"
+- else
+  .top-show
+    .top-show-info
+      .top-show-info-name
+        #{current_user.name}さん
+      .top-show-info-edit
+        = link_to "編集する", "#"
+    .top-show-player
+      .top-show-player-text
+        好きな選手
+      .top-show-player-add
+        = @user.player.name
+
+    
+  

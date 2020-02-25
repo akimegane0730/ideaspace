@@ -1,0 +1,50 @@
+.top-show {
+
+  &-info {
+    display: flex;
+    width: 60vw;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-around;
+    height: 100px;
+    line-height: 100px;
+    box-shadow: 10px 15px 10px 5px #999999;
+    &-name {
+      font-size: 2rem;
+    }
+
+    &-edit a{
+      width: 30%;
+      background: lightgreen;
+      padding: 10px;
+      border-radius: 20px;
+    }
+    &-edit a:hover{
+      opacity: .7;
+    }
+  }
+
+  &-player {
+    display: flex;
+    width: 60vw;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-around;
+    height: 100px;
+    line-height: 100px;
+    box-shadow: 10px 15px 10px 5px #999999;
+    &-add {
+      font-size: 3rem;
+    }
+    &-add1 a{
+      background: lightgreen;
+      padding: 10px;
+      border-radius: 20px;
+    }
+    &-add1 a:hover{
+      opacity: .7;
+    }
+  }
+}
