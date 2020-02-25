@@ -1,0 +1,50 @@
+- if @user.player_id.blank?
+  .top-show
+    .top-show-info
+      .top-show-info-name
+        #{current_user.name}さん
+      .top-show-info-edit
+        = link_to "編集する", edit_user_path
+    .top-show-player
+      .top-show-player-text
+        好きな選手
+      .top-show-player-add1
+        = link_to "追加する", edit_user_path
+- else
+  .top-show
+    .top-show-info
+      .top-show-info-name
+        #{current_user.name}さん
+      .top-show-info-edit
+        = link_to "編集する", edit_user_path
+    .top-show-player
+      .top-show-player-text
+        好きな選手
+      .top-show-player-add
+        = @user.player.name
+%h3 投稿一覧
+.userPage
+  - @posts.each do |post|
+    .top-box
+      .top-box-day
+        = post.created_at.to_s(:datetime_jp)
+        .top-box-image
+          = image_tag("#{post.images.first.image}", class:'top-box-image')
+      .top-box-info
+        .top-box-info-content
+          = post.content
+        .top-box-info-player
+          今日のMVP
+          = post.player.name
+        .top-box-info-detail
+          .top-box-info-detail-place
+            = post.place.name
+          .top-box-info-detail-opponent
+            VS
+            = post.opponent.name
+        .top-box-info-user
+          = link_to "#", class:"top-box-info-user" do
+            = post.user.name
+
+    
+  
