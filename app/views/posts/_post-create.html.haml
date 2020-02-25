@@ -1,7 +1,7 @@
 .post
   .post-new
   = form_with model: @post, class:"post-form", url: { action: :create }, local: true do |f|
-    %label.post-new-image
+    %label.post-new-image#box
       = f.fields_for :images do |i|
         .input-area#box
           = i.file_field :image, id: 'img-file', style: "display:none;"
