@@ -1,0 +1,30 @@
+.top-box-info-bottom {
+  display: flex;
+  justify-content: space-between;
+
+  &-btn {
+    display: flex;
+    &-edit a{
+      line-height: 90px;
+      margin-right: 50px;
+      background: lightgreen;
+      padding: 3px;
+      border-radius: 10px;
+    }
+    &-deleta a{
+      line-height: 90px;
+      background: lightgreen;
+      padding: 3px;
+      border-radius: 10px;
+    }
+  }
+
+  &-user a{
+    text-decoration: none;
+    float: right;
+    margin-top: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+  }
+}

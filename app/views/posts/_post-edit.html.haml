@@ -1,0 +1,24 @@
+.post
+  .post-new
+  = form_with model: @post, class:"post-form", url: { action: :create }, local: true do |f|
+    %label.post-new-image#box
+      = f.fields_for :images do |i|
+        .input-area#box
+          = i.file_field :image, id: 'img-file', style: "display:none;"
+      .post-new-image-icon
+        =icon('fas', 'camera')
+      %h1.post-new-image-text 画像を投稿
+    .post-new-info
+      .post-new-info-content
+        = f.text_field :content, class: 'form__post__content', required: "" , placeholder: '感想など(250文字以内)'
+      .post-new-info-player
+        %h2 今日のMVP
+        = f.collection_select :player_id, Player.all, :id, :name, {prompt: "---"}
+      .post-new-info-place
+        %h2 球場
+        = f.collection_select :place_id, Place.all, :id, :name, {prompt: "---"}
+      .post-new-info-opponent
+        %h2 対戦相手
+        = f.collection_select :opponent_id, Opponent.all, :id, :name, {prompt: "---"}
+      .post-new-info-btn
+        = f.submit "変更する", class:"post-new-info-btn"
