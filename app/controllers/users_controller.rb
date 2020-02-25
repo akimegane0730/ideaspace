@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    @posts = Post.where(user_id: current_user.id)
     @user = User.find(params[:id])
     @user.update_attributes(user_params)
     render action: :show
