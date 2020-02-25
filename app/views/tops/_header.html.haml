@@ -8,7 +8,7 @@
   - if user_signed_in?
     #ul.header-list
       %li= link_to "選手一覧", players_path
-      %li= link_to "今日のポジ要素", "#"
+      %li= link_to "マイページ", user_path(current_user.id)
       %li= link_to "ログアウト", destroy_user_session_path, method: :delete 
   - else
     #ul.header-list

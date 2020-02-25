@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :posts, only: [:new, :create, :edit, :update]
   get 'tops/many', to: 'tops#many'
   resources :players, only: [:index]
-  resources :users, only: [:show]
+  resources :users, only: [:show, :edit, :update]
 end
