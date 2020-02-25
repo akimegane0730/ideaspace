@@ -14,12 +14,10 @@ ActiveRecord::Schema.define(version: 2020_02_25_073916) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment", null: false
-    t.bigint "post_id", null: false
-    t.bigint "user_id", null: false
+    t.integer "user_id"
+    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_comments_on_post_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -55,7 +53,5 @@ ActiveRecord::Schema.define(version: 2020_02_25_073916) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "comments", "posts"
-  add_foreign_key "comments", "users"
   add_foreign_key "images", "posts"
 end

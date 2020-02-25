@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :comments
-
+  has_many :posts
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :player
 end

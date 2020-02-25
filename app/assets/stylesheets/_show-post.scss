@@ -28,3 +28,12 @@
     color: black;
   }
 }
+.comment {
+  text-align: center;
+  width: 80vw;
+  min-width: 960px;
+  box-shadow: 10px 15px 10px 5px #999999;
+  margin: 0 auto 50px auto;
+  border-radius: 10px;
+  z-index: 2;
+}
