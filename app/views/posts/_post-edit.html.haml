@@ -1,6 +1,6 @@
 .post
   .post-new
-  = form_with model: @post, class:"post-form", url: { action: :create }, local: true do |f|
+  = form_with model: @post, class:"post-form", url: { action: :update }, local: true do |f|
     %label.post-new-image#box
       = f.fields_for :images do |i|
         .input-area#box

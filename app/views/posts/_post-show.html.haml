@@ -33,15 +33,16 @@
               = @post.user.name
 .comment
   .commentArea
-    = form_with model: [@post, @comment], url: { action: :create }, local: true do |f|
+    = form_with model: [@post, @comment], local: true do |f|
       = f.text_area :comment, placeholder: "コメントする", rows: "2"
       %br
-      = f.submit "SEND"
-  .comments
-    %h4 コメント一覧
-    - if @comments
-      - @comments.each do |comment|
-        %p
-          %strong
-            = link_to comment.user.name, "#"
+      = f.submit "SEND", class:"send-comment"
+.comments
+  %h4 <コメント一覧>
+  - if @comments
+    - @comments.each do |comment|
+      .comments-a
+        .comments-a-user
+          = link_to comment.user.name, "/users/#{comment.user.id}" 
+        .comments-a-comment
           = comment.comment

@@ -1,9 +1,8 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
   def create
-    Comment.create(comment_params)
-    @post = @comment.post
-    redirect_to :root
+    comment = Comment.create(comment_params)
+    redirect_to "/posts/#{comment.post.id}"
   end
 
   
