@@ -1,0 +1,33 @@
+.intro
+  .intro-text
+    %p De活
+    %h5 とは？？
+  .intro-image
+    = image_tag 'sta.jpg', class: 'aside', id: 'img', size: '1440x500'
+  .intro-about
+    .intro-about-content
+      .intro-about-content-text
+        横浜DeNAベイスターズを大好きに
+        %br
+        なるためのサービス
+      .intro-about-content-show
+        %p こんなことできます！
+        %ul
+          %li ・試合の感想の共有
+          %li ・好きな選手の登録
+          %li ・Deファンとも友達になれるかも！？
+          %li ・最新情報のキャッチ
+      .intro-about-content-image
+        .intro-about-content-image1
+          = image_tag 'ou.png'
+        .intro-about-content-image2
+          = image_tag 'post.png', size: '300x300'
+        .intro-about-content-image3
+          = image_tag 'yo.png'
+        .intro-about-content-image4
+          = image_tag 'lo.png'
+    .intro-about-btn
+      = link_to "始める", tops_path, class:"intro-about-btn"
+    .footer1
+      =link_to "Produce by okabeakihiro", "#"
+    

@@ -1,0 +1,48 @@
+.top-index
+  .top-box
+    .top-box-day
+      = @post.created_at.to_s(:datetime_jp)
+      .top-box-image1
+        = image_tag("#{@post.images.first.image}", class:'top-box-image')
+    .top-box-info
+      .top-box-info-content
+        = @post.content
+      .top-box-info-player
+        今日のMVP
+        = @post.player.name
+      .top-box-info-detail
+        .top-box-info-detail-place
+          = @post.place.name
+        .top-box-info-detail-opponent
+          VS
+          = @post.opponent.name
+      - if user_signed_in? && @post.user_id == current_user.id
+        .top-box-info-bottom
+          .top-box-info-bottom-btn
+            .top-box-info-bottom-btn-edit
+              = link_to "編集する", edit_post_path(@post.id)
+            .top-box-info-bottom-btn-deleta
+              = link_to "削除する", post_path(@post.id), method: :delete
+          .top-box-info-bottom-user
+            = link_to "#", class:"top-box-info-user" do
+              = @post.user.name
+      - else
+        .top-box-info-bottom
+          .top-box-info-bottom-user
+            = link_to "#", class:"top-box-info-user" do
+              = @post.user.name
+.comment
+  .commentArea
+    = form_with model: [@post, @comment], local: true do |f|
+      = f.text_area :comment, placeholder: "コメントする", rows: "2"
+      %br
+      = f.submit "SEND", class:"send-comment"
+.comments
+  %h4 <コメント一覧>
+  - if @comments
+    - @comments.each do |comment|
+      .comments-a
+        .comments-a-user
+          = link_to comment.user.name, "/users/#{comment.user.id}" 
+        .comments-a-comment
+          = comment.comment

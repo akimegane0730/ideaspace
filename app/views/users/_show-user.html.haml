@@ -2,7 +2,7 @@
   .top-show
     .top-show-info
       .top-show-info-name
-        #{current_user.name}さん
+        = @user.name
       .top-show-info-edit
         = link_to "編集する", edit_user_path
     .top-show-player
@@ -14,7 +14,7 @@
   .top-show
     .top-show-info
       .top-show-info-name
-        #{current_user.name}さん
+        = @user.name
       .top-show-info-edit
         = link_to "編集する", edit_user_path
     .top-show-player
