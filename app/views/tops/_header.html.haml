@@ -3,7 +3,7 @@
     .header-left-title 
       = link_to "De活", root_path
     .header-left-question
-      = link_to "#", method: :get do
+      = link_to tops_intro_path, method: :get do
         =icon('fas', 'question-circle', class:"header-left-question")
   - if user_signed_in?
     #ul.header-list

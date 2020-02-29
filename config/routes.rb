@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'tops/intro', to: 'tops#intro'
   resources :players, only: [:index]
   resources :users, only: [:show, :edit, :update]
+  resources :tops, only: [:index]
 end
