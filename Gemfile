@@ -69,3 +69,5 @@ gem 'active_hash'
 gem 'carrierwave'
 gem "mini_magick"
 gem 'pg', group: :production
+
+gem 'sqlite3', '~>1.3.6', group: :development

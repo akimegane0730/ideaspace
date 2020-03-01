@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to :root
+      redirect_to "/tops/"
     else
       render action: :new
     end
