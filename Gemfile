@@ -68,3 +68,4 @@ gem 'devise'
 gem 'active_hash'
 gem 'carrierwave'
 gem "mini_magick"
+gem 'pg', group: :production

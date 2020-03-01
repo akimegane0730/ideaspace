@@ -66,14 +66,14 @@
       }
     }
     &-btn {
-      padding: 5px;
-      width: 20%;
-      border-radius: 21px;
+      padding: 15px;
+      width: 15%;
+      border-radius: 30px;
       background: #4689FF;
       color: #fff;
       text-align: center;
       border: none;
-      margin: 50px auto 50px auto; 
+      margin: 30px auto 0 auto; 
       transition: opacity .5s;
       cursor: pointer;
       &:hover {
@@ -81,6 +81,10 @@
       }
     }
   }
+}
+.bar {
+  width: 100vw;
+  height: 50px;
 }
 .footer1 a{
   width: 100%;
