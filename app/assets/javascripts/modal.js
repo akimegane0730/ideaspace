@@ -1,9 +1,5 @@
 $(function() {
-  $(".top-box-info-user").click(function(){
-    console.log('hello');
-    $('.top-modal').fadeIn();
+  $('#ttop-box').click(function() {
+    $('#modal').fadeIn(1500);
   });
-  // $('#close-modal').click(function() {
-  //   $('#login-modal').fadeOut();
-  // });
 });
