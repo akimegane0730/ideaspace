@@ -51,4 +51,27 @@
       cursor: pointer;
     }
   }
+  &-email {
+    display: flex;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 20px;
+    font-size: 2rem;
+
+    &-text {
+      margin-left: 5%;
+    }
+  }
+
+  &-tell {
+    display: flex;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 20px;
+    font-size: 2rem;
+
+    &-text {
+      margin-left: 5%;
+    }
+  }
 }
