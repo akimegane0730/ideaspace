@@ -6,7 +6,10 @@ $(function() {
 
 
   $('#info-me').click(function() {
-    
     $('.me').fadeIn();
+  });
+
+  $('.batsu').click(function() {
+    $('.me').fadeOut();
   });
 });

@@ -39,5 +39,16 @@
 
   &-1 {
     display: flex;
+    position: relative;
+    
+    &-title {
+      margin-left: 10%;
+    }
+
+    &-icon {
+      position: absolute;
+      right: 5%;
+      cursor: pointer;
+    }
   }
 }
