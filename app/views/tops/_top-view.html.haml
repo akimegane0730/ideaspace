@@ -1,7 +1,7 @@
 .top
   .top-index
   - @posts.each do |post|
-    = link_to "#" do
+    = link_to (post_path(post.id)) do
       .top-box
         .top-box-day
           = post.created_at.to_s(:datetime_jp)
