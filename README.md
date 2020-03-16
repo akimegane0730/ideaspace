@@ -24,7 +24,8 @@
 
 ## 投稿へのコメント機能の実装。
 ## active hashを用いた情報の管理
-<img width="470" alt="スクリーンショット 2020-01-07 12 09 22" src="https://user-images.githubusercontent.com/58383159/76726806-9cff8180-6795-11ea-9869-ec8bbd121e5b.png">
+<img width="1015" alt="スクリーンショット 2020-03-16 14 50 02" src="https://user-images.githubusercontent.com/58383159/76726981-18613300-6796-11ea-8341-2b36d61382f5.png">
+
 
 ## javascriptを用いた画像投稿時にピュレビュー表示
 
