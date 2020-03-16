@@ -28,7 +28,7 @@
 
 
 ## javascriptを用いた画像投稿時にピュレビュー表示
-
+https://gyazo.com/45a062cefcfadbc5b1be422402a3dc94
 
 # DB設計
 
