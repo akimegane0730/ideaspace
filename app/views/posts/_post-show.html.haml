@@ -23,6 +23,8 @@
               = link_to "編集する", edit_post_path(@post.id)
             .top-box-info-bottom-btn-deleta
               = link_to "削除する", post_path(@post.id), method: :delete
+            .top-box-info-bottom-btn-icon
+              = icon('fas', 'heart', class:"heart-icon")
           .top-box-info-bottom-user
             = link_to "#", class:"top-box-info-user" do
               = @post.user.name
