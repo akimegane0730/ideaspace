@@ -12,4 +12,7 @@ $(function() {
   $('.batsu').click(function() {
     $('.me').fadeOut();
   });
+
+
+  
 });
